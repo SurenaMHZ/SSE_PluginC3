@@ -27,27 +27,34 @@ For the example above to work, you need a server capable of sending data updates
 The server-side event stream syntax is simple. Set the "Content-Type" header to "text/event-stream". Now you can start sending event streams.
 Example:
 
+```php
+<?php
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $time = date('r');
 echo "data: The server time is: {$time}\n\n";
-
+?>
+```
 
 Controlling the Reconnection-timeout
 The browser attempts to reconnect to the source roughly 3 seconds after each connection is closed. You can change that timeout by including a line beginning with "retry:", followed by the number of milliseconds to wait before trying to reconnect.
 
 The following example attempts a reconnect after 10 seconds:
-
+```php
+<?php
 retry: 10000\n
-
+?>
+```
 Example:
-
+```php
+<?php
 header('Access-Control-Allow-Origin: *'); 
 header('Content-Type: text/event-stream');
 
 echo "retry: 10000\n";
 $time = date('r');
 echo "data: The server time is: {$time}\n\n";
-
+?>
+```
 
