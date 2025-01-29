@@ -1,1 +1,1 @@
-{s:true}
+{b:true,w:true}
