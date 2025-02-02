@@ -1,1 +1,1 @@
-{b:"active",w:"active"}
+{b:"active",w:"active",s:"active"}
